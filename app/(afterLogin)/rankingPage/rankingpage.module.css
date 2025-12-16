@@ -1,0 +1,183 @@
+.container {
+  width: 100%;
+  height: 100dvh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.body {
+  width: 100vw;
+  flex: 1; /* ⭐ 남은 영역 차지 */
+  min-height: 0; /* ⭐⭐ 이거 없으면 절대 안 됨 */
+  overflow-y: auto; /* ⭐ body만 스크롤 */
+  -webkit-overflow-scrolling: touch; /* 모바일 부드러운 스크롤 */
+  display: flex;
+  justify-content: center;
+  background-color: #f9fafb;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.body_section {
+  width: 100%;
+  max-width: 536px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.filter_box {
+  width: 100%;
+  max-width: 320px;
+  height: 44px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.filter_box_item {
+  width: 100px;
+  height: 44px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #757575;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.filter_box_item:hover {
+  background-color: #757575;
+  color: white;
+}
+
+.filter_box_item:focus {
+  background-color: #757575;
+  color: white;
+}
+
+.my_rank_section {
+  width: 100%;
+  max-width: 536px;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.my_rank_section_header {
+  width: 100%;
+  max-width: 100%;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.my_rank_section_detail {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.my_rank_circle {
+  width: 48px;
+  height: 48px;
+  background-color: #eff6ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my_rank_circle_logo {
+  width: 24px;
+  height: 24px;
+  color: #3b82f6;
+}
+
+.my_rank_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.my_rank_grade {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.my_rank_sentence {
+  font-size: 14px;
+  color: #757575;
+}
+
+.entire_rank_section {
+  width: 100%;
+  max-width: 536px;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entire_rank_section_item {
+  width: 100%;
+  max-width: 100%;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.entire_rank_section_item_info {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.entire_rank_section_item_grade {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.entire_rank_section_item_person {
+  display: flex;
+  flex-direction: column;
+}
+
+.person_name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.person_level {
+  font-size: 14px;
+  color: #757575;
+}
+
+.entire_rank_section_item_report {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
