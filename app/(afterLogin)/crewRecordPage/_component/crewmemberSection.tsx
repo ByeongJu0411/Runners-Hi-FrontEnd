@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./crewmemberSection.module.css";
 
 const DUMMY_CREW_MEMBERS = [
@@ -24,7 +25,9 @@ export default function CrewMemberSection() {
           </div>
 
           {/* 오른쪽: 프로필 버튼 */}
-          <button className={styles.profile_button}>프로필</button>
+          <Link href="/otherprofilePage" className={styles.profile_button}>
+            프로필
+          </Link>
         </div>
       ))}
     </div>

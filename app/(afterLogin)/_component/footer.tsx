@@ -1,28 +1,39 @@
+"use client";
+
 import styles from "./footer.module.css";
 import { IoClipboardOutline, IoChatbubbleOutline } from "react-icons/io5";
 import { HiOutlineHome } from "react-icons/hi2";
 import { PiRankingThin } from "react-icons/pi";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    return pathname === href || pathname.startsWith(href);
+  };
+
+  const footerItems = [
+    { href: "/homePage", icon: HiOutlineHome, label: "홈" },
+    { href: "/crewRecordPage", icon: IoClipboardOutline, label: "크루 기록" },
+    { href: "/communityPage", icon: IoChatbubbleOutline, label: "커뮤니티" },
+    { href: "/rankingPage", icon: PiRankingThin, label: "랭킹" },
+  ];
+
   return (
     <div className={styles.footer}>
       <div className={styles.footer_button_section}>
-        <Link href="/homePage" className={styles.footer_button_item}>
-          <HiOutlineHome className={styles.footer_button_item_logo} />홈
-        </Link>
-        <Link href="/crewRecordPage" className={styles.footer_button_item}>
-          <IoClipboardOutline className={styles.footer_button_item_logo} />
-          크루 기록
-        </Link>
-        <div className={styles.footer_button_item}>
-          <IoChatbubbleOutline className={styles.footer_button_item_logo} />
-          커뮤니티
-        </div>
-        <Link href="/rankingPage" className={styles.footer_button_item}>
-          <PiRankingThin className={styles.footer_button_item_logo} />
-          랭킹
-        </Link>
+        {footerItems.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={`${styles.footer_button_item} ${isActive(item.href) ? styles.active : ""}`}
+          >
+            <item.icon className={styles.footer_button_item_logo} />
+            {item.label}
+          </Link>
+        ))}
       </div>
     </div>
   );
