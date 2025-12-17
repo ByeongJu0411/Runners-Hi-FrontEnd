@@ -1,0 +1,144 @@
+.result_section {
+  width: 100%;
+  max-width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+}
+
+.result_section::-webkit-scrollbar {
+  display: none;
+}
+
+.result_item {
+  width: 100%;
+  max-width: 100%;
+  height: 84px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e8e8e8;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.crew_info {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.crew_img {
+  width: 64px;
+  height: 64px;
+  background-color: #e8e8e8;
+  border-radius: 50%;
+  position: relative;
+}
+
+.crew_name_count {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.crew_name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.crew_count,
+.intro_sentence {
+  font-size: 14px;
+  color: #757575;
+}
+
+.join_button {
+  width: 62px;
+  height: 32px;
+  border-radius: 12px;
+  background-color: #d1fae5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #059669;
+  font-size: 12px;
+}
+
+.search_section {
+  width: 100%;
+  max-width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.search_box {
+  width: 100%;
+  max-width: 440px;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 8px;
+}
+
+.search_input {
+  width: 100%;
+  max-width: 360px;
+  height: 100%;
+  color: #757575;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.search_input:focus {
+  outline: none;
+}
+
+.search_button {
+  width: 34px;
+  height: 34px;
+  background-color: #368bb5;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+.search_button:hover {
+  background-color: #337b9f;
+}
+
+.random_button {
+  width: 50px;
+  height: 50px;
+  background-color: #dfedfe;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #368bb5;
+  cursor: pointer;
+}
+
+.random_button:hover {
+  background-color: #c2d8f3;
+}
