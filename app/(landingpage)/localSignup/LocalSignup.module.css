@@ -62,6 +62,18 @@
   border-color: #675fed;
 }
 
+/* 에러 메시지 */
+.error_message {
+  color: #ff4444;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  background-color: #fff5f5;
+  border-radius: 8px;
+  border-left: 3px solid #ff4444;
+  margin: -4px 0;
+}
+
 /* 회원가입 버튼 */
 .signup_button {
   height: 52px;
@@ -75,12 +87,18 @@
   transition: background-color 0.25s ease, transform 0.1s ease;
 }
 
-.signup_button:hover {
+.signup_button:hover:not(:disabled) {
   background-color: #5d55e2;
 }
 
-.signup_button:active {
+.signup_button:active:not(:disabled) {
   transform: scale(0.97);
+}
+
+.signup_button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #9b95f5;
 }
 
 /* 하단 링크 */
@@ -93,6 +111,12 @@
 .back_button {
   color: #757575;
   text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.back_button:hover {
+  color: #675fed;
 }
 
 /* ======================= */
@@ -123,5 +147,9 @@
 
   .bottom_buttons {
     font-size: 0.9rem;
+  }
+
+  .error_message {
+    font-size: 0.85rem;
   }
 }
