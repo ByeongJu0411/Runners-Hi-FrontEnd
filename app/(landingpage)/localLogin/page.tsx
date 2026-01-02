@@ -20,7 +20,7 @@ export default function LocalLoginPage() {
             <input type="email" placeholder="이메일" className={styles.input} />
             <input type="password" placeholder="비밀번호" className={styles.input} />
 
-            <Link href="/welcomePage" className={styles.login_button}>
+            <Link href="/homePage" className={styles.login_button}>
               로그인
             </Link>
           </form>

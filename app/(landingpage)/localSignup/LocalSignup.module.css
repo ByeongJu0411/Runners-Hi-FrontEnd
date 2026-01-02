@@ -49,12 +49,20 @@
   gap: 14px;
 }
 
+/* 입력 필드 래퍼 */
+.input_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .input {
   height: 52px;
   padding: 0 16px;
   border-radius: 14px;
   border: 1px solid #e8e8e8;
   font-size: 1rem;
+  transition: border-color 0.2s ease;
 }
 
 .input:focus {
@@ -62,16 +70,56 @@
   border-color: #675fed;
 }
 
+/* 입력 상태별 스타일 */
+.input_error {
+  border-color: #ff4444 !important;
+}
+
+.input_success {
+  border-color: #22c55e !important;
+}
+
+/* 검증 메시지 */
+.validation_message {
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.validation_error {
+  color: #dc2626;
+  background-color: #fef2f2;
+  border-left: 3px solid #dc2626;
+}
+
+.validation_success {
+  color: #16a34a;
+  background-color: #f0fdf4;
+  border-left: 3px solid #16a34a;
+}
+
+.validation_checking {
+  color: #9b95f5;
+  background-color: #f5f3ff;
+  border-left: 3px solid #9b95f5;
+}
+
 /* 에러 메시지 */
 .error_message {
   color: #ff4444;
   font-size: 0.9rem;
   font-weight: 500;
-  padding: 8px 12px;
+  padding: 10px 14px;
   background-color: #fff5f5;
-  border-radius: 8px;
+  border-radius: 10px;
   border-left: 3px solid #ff4444;
   margin: -4px 0;
+  text-align: center;
 }
 
 /* 회원가입 버튼 */
@@ -151,5 +199,11 @@
 
   .error_message {
     font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+
+  .validation_message {
+    font-size: 0.8rem;
+    padding: 5px 10px;
   }
 }
