@@ -55,11 +55,25 @@
   border-radius: 14px;
   border: 1px solid #e8e8e8;
   font-size: 1rem;
+  transition: border-color 0.2s ease;
 }
 
 .input:focus {
   outline: none;
   border-color: #675fed;
+}
+
+/* 에러 메시지 */
+.error_message {
+  color: #ff4444;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 12px 16px;
+  background-color: #fff5f5;
+  border-radius: 14px;
+  border: 1px solid #ffe0e0;
+  margin: -4px 0;
+  text-align: center;
 }
 
 /* 로그인 버튼 */
@@ -74,15 +88,22 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
+  border: none;
   transition: background-color 0.25s ease, transform 0.1s ease;
 }
 
-.login_button:hover {
+.login_button:hover:not(:disabled) {
   background-color: #5d55e2;
 }
 
-.login_button:active {
+.login_button:active:not(:disabled) {
   transform: scale(0.97);
+}
+
+.login_button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #9b95f5;
 }
 
 /* 구글 로그인 */
@@ -120,11 +141,21 @@
   color: #675fed;
   font-weight: 600;
   text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.signup_button:hover {
+  color: #5d55e2;
 }
 
 .back_button {
   color: #757575;
   text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.back_button:hover {
+  color: #675fed;
 }
 
 /* ======================= */
@@ -155,5 +186,10 @@
 
   .bottom_buttons {
     font-size: 0.9rem;
+  }
+
+  .error_message {
+    font-size: 0.85rem;
+    padding: 10px 14px;
   }
 }
